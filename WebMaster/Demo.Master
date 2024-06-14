@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Demo.master.cs" Inherits="WebApplication1.WebMaster.Demo" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <%--css--%>
+        <style >
+            .navtabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+  position: relative;
+}
+.navtab {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+.navtab:hover {
+  color: #007BFF;
+}
+.navtab.active {
+  color: #007BFF;
+  font-weight: 600;
+}
+        </style>
+
+        <%--js--%>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <%--head code--%>
+            
+              <div class="navtabs">
+      <div class="navtab active" data-target="home">Home</div>
+      <div class="navtab" data-target="about">About</div>
+      <div class="navtab" data-target="contact">Contact</div>
+      <div class="navtab" data-target="page4">Page4</div>
+      <div class="navtab" data-target="page5">Page5</div>
+      <div class="navtab" data-target="page6">Page6</div>
+      <div class="navtab" data-target="page7">Page7</div>
+      <div class="underline"></div>
+    </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <%--footer code--%>
+        </div>
+    </form>
+</body>
+</html>
